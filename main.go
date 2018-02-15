@@ -114,7 +114,7 @@ func unpackImage(containerDir string) string{
 	refs := []string{"name=singularity-build"}
 	unpackDir, err := ioutil.TempDir("","dockertest")
 	must(err)
-	fmt.Printf("Container will be unpacked to %s \n", containerDir)
+	fmt.Printf("Container will be unpacked to %s \n", unpackDir)
 	must(image.UnpackLayout(containerDir, unpackDir, "amd64", refs ))
 
 	return unpackDir
