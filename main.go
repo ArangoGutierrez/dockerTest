@@ -90,7 +90,7 @@ func fetchImage() string {
 	policyContext, err := signature.NewPolicyContext(policy)
 	must(err)
 
-	fmt.Printf("Fetching container %s \n", os.Args[2:])
+	fmt.Printf("Fetching container %s \n", os.Args[2])
 
 	srcRef, err := alltransports.ParseImageName(os.Args[2])
 	must(err)
